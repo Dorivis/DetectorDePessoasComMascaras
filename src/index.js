@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom'
 import useModel from './useModel'
 import ObjectDetectionVideo from './object-detection-video/ObjectDetectionVideo'
 
+import Header from './components/Header';
+
 import './index.css'
 
 const handlePrediction = (predictions) => {
@@ -37,8 +39,12 @@ const App = () => {
 
   return (
     <div className="fillPage">
+      <Header />
+      
       <div id="message"></div>
+
       <input type="file" accept="video/*"/>
+
       <ObjectDetectionVideo
         model={model}
         // onPrediction={handlePrediction}
@@ -51,6 +57,7 @@ const App = () => {
         // mirrored:   mirror the video about its vertical axis.
         mirrored
       />
+
     </div>
   )
 }
