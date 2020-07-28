@@ -8,6 +8,7 @@ export const Container = styled.div`
     z-index: 5;
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
 `;
 
 export const Brand = styled.div`
