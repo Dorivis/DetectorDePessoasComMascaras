@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Video = styled.video`
-    width: 800;
+    width: 700px;
     height: 400px;
     margin-top: 10px;
 `;
