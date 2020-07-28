@@ -1,6 +1,8 @@
 import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-import { Container, ListVideos, Video } from './styles';
+import { Container, Video } from './styles';
 
 import useModel from '../../useModel';
 import ObjectDetectionVideo from '../../object-detection-video/ObjectDetectionVideo';
@@ -8,6 +10,25 @@ import VideoFile from '../../uploads/VideoMaskedAndNonMaskedPeople.mp4';
 
 function MainSection() {
     const model = useModel(process.env.PUBLIC_URL + '/model_web')
+
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
 
     const handlePrediction = (predictions) => {
         console.timeEnd('detect')
@@ -35,17 +56,35 @@ function MainSection() {
 
     return (
         <Container>
-            <ListVideos>
-                <Video controls autoplay>
-                    <source src={VideoFile} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </Video>
-
-                <Video controls autoplay>
-                    <source src={VideoFile} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </Video>
-            </ListVideos>
+            <Carousel
+                swipeable={false}
+                draggable={false}
+                showDots={true}
+                responsive={responsive}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlaySpeed={1000}
+                keyBoardControl={true}
+                customTransition="all .5"
+                transitionDuration={500}
+                containerClass="carousel-container"
+                removeArrowOnDeviceType={["tablet", "mobile"]}
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px"
+            >
+                <div>
+                    <Video controls autoplay>
+                        <source src={VideoFile} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </Video>
+                </div>
+                <div>
+                    <Video controls autoplay>
+                        <source src={VideoFile} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </Video>
+                </div>
+            </Carousel>
         </Container>
         /* <ObjectDetectionVideo 
             model={model}

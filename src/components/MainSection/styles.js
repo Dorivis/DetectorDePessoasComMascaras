@@ -6,13 +6,8 @@ export const Container = styled.div`
     flex-direction: column;
 `;
 
-export const ListVideos = styled.ul`
-    display: flex;
-    margin: auto;
-`;
-
 export const Video = styled.video`
-    width: 600px;
+    width: 800;
     height: 400px;
-    margin: 15px;
+    margin: auto;
 `;
