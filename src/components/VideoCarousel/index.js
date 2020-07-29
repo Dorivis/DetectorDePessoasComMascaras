@@ -7,6 +7,7 @@ import { Container, Video } from './styles';
 import useModel from '../../useModel';
 import ObjectDetectionVideo from '../../object-detection-video/ObjectDetectionVideo';
 import VideoFile from '../../uploads/VideoMaskedAndNonMaskedPeople.mp4';
+import VideoTest from '../../uploads/AdamTeste.mp4';
 
 function VideoCarousel() {
     const model = useModel(process.env.PUBLIC_URL + '/model_web')
@@ -83,7 +84,7 @@ function VideoCarousel() {
                 </div>
                 <div>
                     <Video controls autoplay>
-                        <source src={VideoFile} type="video/mp4" />
+                        <source src={VideoTest} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>

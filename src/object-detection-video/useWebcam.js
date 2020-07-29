@@ -15,8 +15,6 @@ const useWebcam = (videoRef, onLoaded) => {
         var fileURL = URL.createObjectURL(file)
         videoNode.src = fileURL
       }
-      var inputNode = document.querySelector('input')
-      inputNode.addEventListener('change', playSelectedFile, false)
       var videoNode = document.querySelector('video')
 
       videoRef.current = videoNode

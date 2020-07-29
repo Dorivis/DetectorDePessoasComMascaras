@@ -16,8 +16,6 @@ const App = () => {
 
       <MainSection />
 
-      <input type="file" accept="video/*"/>
-
     </div>
   )
 }
