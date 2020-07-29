@@ -16,6 +16,10 @@ export const Brand = styled.div`
         height: 100px;
         margin: 5px 0 5px 10px;
     }
+
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 export const Name = styled.p`
@@ -23,4 +27,8 @@ export const Name = styled.p`
     font-size: 30px;
     font-weight: bold;
     margin: auto 0 auto 8px;
+
+    :hover {
+        cursor: pointer;
+    }
 `;
