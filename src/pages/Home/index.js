@@ -10,8 +10,8 @@ export default function Home() {
 
             <MainSection />
 
-            <div id="message"></div>
-            <input type="file" accept="video/*"/>
+            {/* <div id="message"></div> */ }
+            {/* <input type="file" accept="video/*"/> */}
         </div>
     );
 }
