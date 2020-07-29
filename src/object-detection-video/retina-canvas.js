@@ -1,8 +1,8 @@
 export const getRetinaContext = (canvas) => {
   const ctx = canvas.getContext('2d')
-  const scale = window.devicePixelRatio
-  let width = canvas.width / scale
-  let height = canvas.height / scale
+  const scale = window.devicePixelRatio;
+  let width = canvas.width / scale;
+  let height = canvas.height / scale;
   return {
     setWidth: (w) => {
       width = w

@@ -1,14 +1,19 @@
-import React, { useRef, useCallback } from 'react'
+import React, { useRef, useCallback, useState } from 'react'
 
 import useWebcam from './useWebcam'
 import { getRetinaContext } from './retina-canvas'
 import { renderPredictions } from './render-predictions'
+import { useCount } from '../context/Count';
+import Info from '../components/Info';
 
 const ObjectDetectionVideo = React.memo(
   ({ model, onPrediction, fit, mirrored, render }) => {
+    const [personWithMask, setPersonWithMask] = useState(0);
+    const [personWithoutMask, setPersonWithoutMask] = useState(0);
+    const videoRef = useRef();
+    const canvasRef = useRef();
 
-    const videoRef = useRef()
-    const canvasRef = useRef()
+    const { count, setCount } = useCount();
 
     useWebcam(videoRef, () => {
       detectFrame()
@@ -16,7 +21,8 @@ const ObjectDetectionVideo = React.memo(
 
     const detectFrame = useCallback(async () => {
       if(model){
-        const predictions = await model.detect(videoRef.current)
+        const predictions = await model.detect(videoRef.current);
+
         if (onPrediction) {
           onPrediction(predictions)
         }
@@ -56,8 +62,14 @@ const ObjectDetectionVideo = React.memo(
             x = wantedWidth - x - width
           }
           return { ...prediction, bbox: [x, y, width, height] }
-        })
+        });
 
+        const withMask = predictions.filter((prediction, index, array) => prediction.class == 'Com mascara');
+        const withoutMask = predictions.filter((prediction, index, array) => prediction.class == 'Sem mascara');
+
+        setCount(predictions.length);
+        setPersonWithMask(withMask.length);
+        setPersonWithoutMask(withoutMask.length);
         const renderFunction = render || renderPredictions
 
         renderFunction(ctx, offsetPredictions)
@@ -74,8 +86,8 @@ const ObjectDetectionVideo = React.memo(
     }
 
     if (videoRef.current) {
-      videoRef.current.style.width = '100%'
-      videoRef.current.style.height = '100%'
+      videoRef.current.style.width = '50%'
+      videoRef.current.style.height = '50%'
       if (fit === 'aspectFit') {
         videoRef.current.style.objectFit = 'contain'
       } else {
@@ -90,9 +102,10 @@ const ObjectDetectionVideo = React.memo(
     }
 
     return (
-      <div style={{ position: 'relative' }}>
-        <video autoPlay playsInline ref={videoRef} />
+      <div style={{ display: 'flex', flexDirection: 'row', position: 'relative' }}>
+        <video controls autoPlay playsInline ref={videoRef} />
         <canvas ref={canvasRef} />
+        <Info personWithMask={personWithMask} personWithoutMask={personWithoutMask} count={count} />
       </div>
     )
   }
