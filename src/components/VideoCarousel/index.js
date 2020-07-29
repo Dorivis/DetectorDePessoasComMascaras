@@ -5,12 +5,12 @@ import 'react-multi-carousel/lib/styles.css';
 import { Container, Video } from './styles';
 
 import useModel from '../../useModel';
-import ObjectDetectionVideo from '../../object-detection-video/ObjectDetectionVideo';
 import VideoFile from '../../uploads/VideoMaskedAndNonMaskedPeople.mp4';
 import VideoTest from '../../uploads/AdamTeste.mp4';
+import history from '../../api/history';
 
 function VideoCarousel() {
-    const model = useModel(process.env.PUBLIC_URL + '/model_web')
+    const model = useModel(process.env.PUBLIC_URL + '/model_web');
 
     const responsive = {
         superLargeDesktop: {
@@ -55,6 +55,10 @@ function VideoCarousel() {
         })
     }
 
+    function handleSelectedVideo() {
+        history.push('/detection');
+    }
+
     return (
         <Container>
             <Carousel
@@ -76,37 +80,23 @@ function VideoCarousel() {
                 itemClass="carousel-item-padding-40-px"
                 renderButtonGroupOutside={true}
             >
-                <div>
+                <div onClick={() => handleSelectedVideo()}>
                     <Video controls autoplay>
                         <source src={VideoFile} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>
-                <div>
+                <div onClick={() => handleSelectedVideo()}>
                     <Video controls autoplay>
                         <source src={VideoTest} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>
-                <div>
+                <div onClick={() => handleSelectedVideo()}>
                     <Video controls autoplay>
                         <source src={VideoFile} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
-                </div>
-                <div>
-                    <ObjectDetectionVideo 
-                        model={model}
-                        onPrediction={handlePrediction}
-                        render={render}
-                        // aspectFill: true
-                        // aspectFit:  The option to scale the video to fit the size of the view
-                        //             by maintaining the aspect ratio. Any remaining area of the
-                        //            view's bounds is transparent.
-                        fit="aspectFit"
-                        // mirrored:   mirror the video about its vertical axis.
-                        mirrored
-                    />
                 </div>
             </Carousel>
         </Container>
