@@ -81,19 +81,19 @@ function VideoCarousel() {
                 renderButtonGroupOutside={true}
             >
                 <div onClick={() => handleSelectedVideo()}>
-                    <Video controls autoplay>
+                    <Video controls muted preload="auto">
                         <source src={VideoFile} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>
                 <div onClick={() => handleSelectedVideo()}>
-                    <Video controls autoplay>
+                    <Video controls muted preload="auto">
                         <source src={VideoTest} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>
                 <div onClick={() => handleSelectedVideo()}>
-                    <Video controls autoplay>
+                    <Video controls muted preload="auto">
                         <source src={VideoFile} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
