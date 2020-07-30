@@ -1,19 +1,16 @@
 import React from 'react';
 
-import { Subtitle, Slogan } from './styles';
-
+import { Subtitle, Container } from './styles';
 import VideoCarousel from '../VideoCarousel';
 
 function MainSection() {
 
     return (
-        <>
+        <Container>
             <Subtitle>Selecione um vídeo abaixo:</Subtitle>
 
             <VideoCarousel />
-
-            <Slogan><p>Simples. Poderoso!</p></Slogan>
-        </>
+        </Container>
     );
 }   
 

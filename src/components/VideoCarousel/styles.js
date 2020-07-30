@@ -1,14 +1,19 @@
 import styled from 'styled-components';
+import Carousel from 'react-multi-carousel';
 
 export const Container = styled.div`
-    margin: 0;
+    margin: 10px 0 60px 0;
     display: flex;
     flex-direction: column;
 `;
 
+export const CarouselModel = styled(Carousel)`
+    div {
+        margin-left: 50px;
+    }
+`;
+
 export const Video = styled.video`
-    width: 700px;
-    height: 400px;
-    margin-top: 10px;
-    border-radius: 10px;
+    width: 600px;
+    height: 350px;
 `;

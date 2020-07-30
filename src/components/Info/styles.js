@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
     margin-left: 20px;
@@ -24,6 +25,16 @@ export const Container = styled.div`
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
         font-size: 15px;
-        color: #333;
+        color: #fff;
+        background: #FF8C00;
+        border: 1px solid #FF8C00;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px gray;
+
+        :hover {
+            cursor: pointer;
+            background: ${shade(0.1, '#FF8C00')};
+            border-color: ${shade(0.1, '#FF8C00')};
+        }
     }
 `;

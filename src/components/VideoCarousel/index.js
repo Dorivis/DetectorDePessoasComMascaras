@@ -1,8 +1,7 @@
 import React from 'react';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { Container, Video } from './styles';
+import { Container, CarouselModel ,Video } from './styles';
 
 import useModel from '../../useModel';
 import VideoFile from '../../uploads/VideoMaskedAndNonMaskedPeople.mp4';
@@ -14,11 +13,11 @@ function VideoCarousel() {
 
     const responsive = {
         superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            breakpoint: { max: 400, min: 3000 },
+            items: 1
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 2024, min: 1024 },
             items: 1
         },
         tablet: {
@@ -31,40 +30,16 @@ function VideoCarousel() {
         }
     };
 
-    const handlePrediction = (predictions) => {
-        console.timeEnd('detect')
-        console.time('detect')
-        console.log(predictions)
-    }
-      
-    const render = (ctx, predictions) => {
-        predictions.forEach((prediction) => {
-          const x = prediction.bbox[0]
-          const y = prediction.bbox[1]
-          const width = prediction.bbox[2]
-          const height = prediction.bbox[3]
-      
-          ctx.setStrokeStyle('#0062ff')
-          ctx.setLineWidth(4)
-          ctx.strokeRect(
-            Math.round(x),
-            Math.round(y),
-            Math.round(width),
-            Math.round(height)
-          )
-        })
-    }
-
     function handleSelectedVideo() {
         history.push('/detection');
     }
 
     return (
         <Container>
-            <Carousel
+            <CarouselModel
                 swipeable={false}
                 draggable={false}
-                showDots={false}
+                showDots={true}
                 centerMode={true}
                 focusOnSelect={true}
                 responsive={responsive}
@@ -72,7 +47,7 @@ function VideoCarousel() {
                 infinite={true}
                 autoPlaySpeed={1000}
                 keyBoardControl={true}
-                customTransition="all .5"
+                customTransition="transform .5"
                 transitionDuration={500}
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -92,13 +67,7 @@ function VideoCarousel() {
                         Your browser does not support the video tag.
                     </Video>
                 </div>
-                <div onClick={() => handleSelectedVideo()}>
-                    <Video controls muted preload="auto">
-                        <source src={VideoFile} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </Video>
-                </div>
-            </Carousel>
+            </CarouselModel>
         </Container>
         
     );

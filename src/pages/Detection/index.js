@@ -5,6 +5,7 @@ import ObjectDetectionVideo from '../../object-detection-video/ObjectDetectionVi
 import CountProvider from '../../context/Count';
 
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Map from '../../components/Map';
 
 export default function Detection() {
@@ -29,6 +30,7 @@ export default function Detection() {
                     mirrored
                 />
                 <Map/>
+                <Footer/>
             </div>
         </CountProvider>
     );

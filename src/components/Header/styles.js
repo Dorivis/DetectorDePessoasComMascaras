@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 120px;
+    height: 90px;
     background-color: navy;
-    border-bottom: solid 3px black;
+    box-shadow: 0px 2px 4px gray;
     z-index: 5;
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 `;
 
 export const Brand = styled.div`
