@@ -32,7 +32,7 @@ function VideoCarousel() {
 
     function handleSelectedVideo(video) {
     //  history.push("detection/?video=" + window.location.href.substring(0, window.location.href.length - 1) + video );
-    //  window.location.assign(window.location.href + "detection/?video=" + window.location.href.substring(0, window.location.href.length - 1) + video );
+      window.location.assign(window.location.href + "detection/?video=" + window.location.href.substring(0, window.location.href.length - 1) + video );
     }
 
     return (
