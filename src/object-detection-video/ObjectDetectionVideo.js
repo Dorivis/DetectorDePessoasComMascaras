@@ -6,6 +6,10 @@ import { renderPredictions } from './render-predictions'
 import { useCount } from '../context/Count';
 import Info from '../components/Info';
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const video = urlParams.get('video')
+
 const ObjectDetectionVideo = React.memo(
   ({ model, onPrediction, fit, mirrored, render }) => {
     const [personWithMask, setPersonWithMask] = useState(0);
@@ -103,7 +107,7 @@ const ObjectDetectionVideo = React.memo(
 
     return (
       <div style={{ display: 'flex', flexDirection: 'row', position: 'relative' }}>
-        <video controls autoPlay playsInline ref={videoRef} />
+        <video controls autoPlay playsInline ref={videoRef} src={video} muted/>
         <canvas ref={canvasRef} />
         <Info personWithMask={personWithMask} personWithoutMask={personWithoutMask} count={count} />
       </div>

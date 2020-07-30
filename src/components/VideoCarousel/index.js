@@ -30,8 +30,9 @@ function VideoCarousel() {
         }
     };
 
-    function handleSelectedVideo() {
-        history.push('/detection');
+    function handleSelectedVideo(video) {
+    //  history.push("detection/?video=" + window.location.href.substring(0, window.location.href.length - 1) + video );
+    //  window.location.assign(window.location.href + "detection/?video=" + window.location.href.substring(0, window.location.href.length - 1) + video );
     }
 
     return (
@@ -55,13 +56,13 @@ function VideoCarousel() {
                 itemClass="carousel-item-padding-40-px"
                 renderButtonGroupOutside={true}
             >
-                <div onClick={() => handleSelectedVideo()}>
+                <div onClick={() => handleSelectedVideo(VideoFile)}>
                     <Video controls muted preload="auto">
                         <source src={VideoFile} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>
-                <div onClick={() => handleSelectedVideo()}>
+                <div onClick={() => handleSelectedVideo(VideoTest)}>
                     <Video controls muted preload="auto">
                         <source src={VideoTest} type="video/mp4" />
                         Your browser does not support the video tag.
@@ -69,7 +70,7 @@ function VideoCarousel() {
                 </div>
             </CarouselModel>
         </Container>
-        
+
     );
 }
 
