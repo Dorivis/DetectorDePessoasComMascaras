@@ -25,7 +25,7 @@ export const Container = styled.div`
     svg {
         margin-top: 20px;
         position: absolute;
-        left: 0px;
+        left: 10px;
     }
 `;
 

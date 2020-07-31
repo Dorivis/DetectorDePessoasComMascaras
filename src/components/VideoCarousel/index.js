@@ -3,13 +3,10 @@ import 'react-multi-carousel/lib/styles.css';
 
 import { Container, CarouselModel ,Video } from './styles';
 
-import useModel from '../../useModel';
-import VideoFile from '../../uploads/VideoMaskedAndNonMaskedPeople.mp4';
-import VideoTest from '../../uploads/AdamTeste.mp4';
-import history from '../../api/history';
+import VideoFile from '../../uploads/videos/VideoMaskedAndNonMaskedPeople.mp4';
+import VideoTest from '../../uploads/videos/AdamTeste.mp4';
 
 function VideoCarousel() {
-    const model = useModel(process.env.PUBLIC_URL + '/model_web');
 
     const responsive = {
         superLargeDesktop: {
@@ -31,7 +28,6 @@ function VideoCarousel() {
     };
 
     function handleSelectedVideo(video) {
-    //  history.push("detection/?video=" + window.location.href.substring(0, window.location.href.length - 1) + video );
       window.location.assign(window.location.href + "detection/?video=" + window.location.href.substring(0, window.location.href.length - 1) + video );
     }
 
@@ -44,7 +40,7 @@ function VideoCarousel() {
                 centerMode={true}
                 focusOnSelect={true}
                 responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
+                ssr={true}
                 infinite={true}
                 autoPlaySpeed={1000}
                 keyBoardControl={true}

@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Brand = styled.div`
     img {
-        height: 100px;
+        height: 80px;
         margin: 5px 0 5px 10px;
     }
 
@@ -24,7 +24,7 @@ export const Brand = styled.div`
 
 export const Name = styled.p`
     color: #FFFFFF;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: bold;
     margin: auto 0 auto 8px;
 

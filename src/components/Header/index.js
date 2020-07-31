@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Brand, Name } from './styles';
 
-import history from '../../api/history';
+import history from '../../config/history';
 
 function Header() {
     function handleClick(){

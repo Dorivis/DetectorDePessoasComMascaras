@@ -1,12 +1,16 @@
 import React from 'react';
 
-import { Container, Brand, Name } from './styles';
+import { Container } from './styles';
+import alerta from '../../uploads/audios/pt_br/alertas.mp3';
 
 function Header({ personWithMask, personWithoutMask, count }) {
-    function handleSubmit(){
-        alert('Emitir algum alerta(Por ex: caixas de som supermercado)');
-    }
 
+    let audio = new Audio(alerta);
+
+    const start = () => {
+        audio.play();
+        alert('Aviso sonoro');
+    }
 
     return (
     <Container>
@@ -15,7 +19,8 @@ function Header({ personWithMask, personWithoutMask, count }) {
         <p style={{color: 'green'}}>Pessoas com mascara: {personWithMask}</p>
         <p style={{color: 'red'}}>Pessoas sem mascara: {personWithoutMask}</p>
         <p>Total de pessoas nesse local: {count}</p>
-        <button onClick={handleSubmit}>Emitir alerta</button>
+
+        <button onClick={start}>Emitir alerta</button>
       </Container>
     );  
 }
