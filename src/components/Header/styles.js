@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const Brand = styled.div`
     img {
         height: 80px;
-        margin: 5px 0 5px 10px;
+        margin: 0px 0 5px 10px;
     }
 
     :hover {
