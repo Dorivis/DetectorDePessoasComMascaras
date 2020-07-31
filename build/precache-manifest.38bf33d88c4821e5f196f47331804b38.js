@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "159ad9d8472b631ee029b0466a85cc56",
+    "revision": "61c0686c9884a733fd56c6093db42515",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.3c1f93d8.chunk.css"
   },
   {
-    "revision": "db71ce2e93c3c21c7782",
+    "revision": "0fe48e26fa2282debd5c",
     "url": "/static/css/main.d886f4b6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.f2ad262b.chunk.js"
   },
   {
-    "revision": "db71ce2e93c3c21c7782",
-    "url": "/static/js/main.6e0c091d.chunk.js"
+    "revision": "0fe48e26fa2282debd5c",
+    "url": "/static/js/main.d81c0558.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/VideoMaskedAndNonMaskedPeople.fbc363b3.mp4"
   },
   {
-    "revision": "e866bf6ff88d617073a8317c1fd19f67",
-    "url": "/static/media/alertas.e866bf6f.mp3"
+    "revision": "fec56da6e79a41a47733f26edd9c8651",
+    "url": "/static/media/alert.fec56da6.mp3"
   },
   {
     "revision": "508641e14e230e60b71d5792aa113a90",

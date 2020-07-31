@@ -10,7 +10,7 @@ function Map() {
     return (
         <Container>
             <hr/>
-            <h1>Mapa de calor da câmera</h1>
+            <h1>Camera heat map:</h1>
             <img src={mapImage} alt="Map" />
             <svg width="400" height="330">
                 <Quadrado width="400" height="400" count={count}/>

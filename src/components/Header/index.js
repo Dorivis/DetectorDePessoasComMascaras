@@ -14,7 +14,7 @@ function Header() {
             <Brand onClick={handleClick}>
                 <img src="https://i.imgur.com/hqVtTM4.png" alt="LogoMask" />
             </Brand>
-            <Name onClick={handleClick}>DetectMasks</Name>
+            <Name onClick={handleClick}>Mask Detection</Name>
         </Container>
     );  
 }

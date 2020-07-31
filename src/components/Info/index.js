@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container } from './styles';
-import alerta from '../../uploads/audios/pt_br/alertas.mp3';
+import alerta from '../../uploads/audios/en/alert.mp3';
 
 function Header({ personWithMask, personWithoutMask, count }) {
 
@@ -9,18 +9,18 @@ function Header({ personWithMask, personWithoutMask, count }) {
 
     const start = () => {
         audio.play();
-        alert('Aviso sonoro');
+        alert('Warning sound');
     }
 
     return (
     <Container>
-        <h3>Câmera X01</h3>
-        <p>Local/Região: Corredor 1 / Próximo a saída / Porta 01</p><br/>
-        <p style={{color: 'green'}}>Pessoas com mascara: {personWithMask}</p>
-        <p style={{color: 'red'}}>Pessoas sem mascara: {personWithoutMask}</p>
-        <p>Total de pessoas nesse local: {count}</p>
+        <h3>Camera X01</h3>
+        <p>Location/Region: Hall 01 / Near the exit / Gate 01</p><br/>
+        <p style={{color: 'green'}}>People with mask: {personWithMask}</p>
+        <p style={{color: 'red'}}>People without a mask: {personWithoutMask}</p>
+        <p>Total people there: {count}</p>
 
-        <button onClick={start}>Emitir alerta</button>
+        <button onClick={start}>Send Alert</button>
       </Container>
     );  
 }

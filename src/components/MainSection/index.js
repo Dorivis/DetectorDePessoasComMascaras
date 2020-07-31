@@ -7,7 +7,7 @@ function MainSection() {
 
     return (
         <Container>
-            <Subtitle>Selecione um vídeo abaixo:</Subtitle>
+            <Subtitle>Select a video below:</Subtitle>
 
             <VideoCarousel />
         </Container>
