@@ -33,15 +33,17 @@ Nessa tela, é possível visualizar o vídeo com o sistema fazendo as detecçõe
 Logo abaixo temos um mapa de calor do estabelecimento, mostrando a região que a câmera de segurança consegue alcançar e uma cor que varia entre verde e vermelho de acordo com a quantidade de pessoas naquela região. Essa informação pode ser importante para o dono do estabelecimento, já que ele pode reorganizar os produtos de maneira a fazer com a aquela região não fique com tantas pessoas e consequentemente com a cor verde.
 
 # Como executar localmente:
-- git clone https://github.com/Dorivis/DetectorDePessoasComMascaras.git
-- cd DetectorDePessoasComMascaras
-- npm install
-- npm start
-- Acessar: http://localhost:3000/
+```
+ git clone https://github.com/Dorivis/DetectorDePessoasComMascaras.git
+ cd DetectorDePessoasComMascaras
+ npm install
+ npm start
+ Acessar: http://localhost:3000/
+ ```
 
-# [Link do protótipo](https://call4code-detect-mask.herokuapp.com/)
+### [Link do protótipo](https://call4code-detect-mask.herokuapp.com/)
 
-# [Vídeo de demonstração](https://call4code-detect-mask.herokuapp.com/)
+### [Vídeo de demonstração](https://call4code-detect-mask.herokuapp.com/)
 
 
 Enjoy :)
