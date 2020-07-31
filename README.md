@@ -18,7 +18,7 @@ Com o auxílio das próprias câmeras de segurança do estabelecimento, utilizam
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-<img src="https://i.imgur.com/Zo98vdU.png" height="160" width="200"> | <img src="https://cloud.annotations.ai/docs-assets/generated_images@1x/0a.CA_login.png" height="260" width="340">  | <img src="https://miro.medium.com/max/688/1*32ofaVnMm3UiK9EPbPyWDg.png" height="260" width="300"> 
+<img src="https://i.imgur.com/Zo98vdU.png" height="160" width="200"> | <img src="https://cloud.annotations.ai/docs-assets/generated_images@1x/0a.CA_login.png" height="260" width="370">  | <img src="https://miro.medium.com/max/688/1*32ofaVnMm3UiK9EPbPyWDg.png" height="260" width="300"> 
 
 # Imagens do projeto:
 
