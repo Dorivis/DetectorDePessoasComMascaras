@@ -12,9 +12,9 @@ A Pandemia gerada pelo novo coronavírus causou inúmeros impactos na sociedade.
 Com o auxílio das próprias câmeras de segurança do estabelecimento, utilizamos algumas ferramentas de reconhecimento de imagens dentro da IBM Cloud para analisar se a pessoa está ou não utilizando máscaras e além disso, criamos um mapa de calor da região para exibir quais locais possuem uma maior quantidade de pessoas. Essa informação pode ser útil caso os responsáveis pelo estabelecimento queiram reorganizar os produtos de maneira a distribuir as pessoas entre diferentes regiões.
 
 ## Ferramentas utilizadas:
-- [Text To Speech](https://www.ibm.com/br-pt/cloud/watson-text-to-speech)
-- [IBM Cloud Annotations](https://cloud.annotations.ai/)
-- [Watson Machine Learning](https://www.ibm.com/cloud/machine-learning)
+- [Text To Speech](https://www.ibm.com/br-pt/cloud/watson-text-to-speech) - Criação do alerta sonoro
+- [IBM Cloud Annotations](https://cloud.annotations.ai/) - Criação do modelo para análise de vídeo
+- [Watson Machine Learning](https://www.ibm.com/cloud/machine-learning) - Aprendizado do modelo
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
@@ -32,7 +32,16 @@ Nessa tela, é possível visualizar o vídeo com o sistema fazendo as detecçõe
 
 Logo abaixo temos um mapa de calor do estabelecimento, mostrando a região que a câmera de segurança consegue alcançar e uma cor que varia entre verde e vermelho de acordo com a quantidade de pessoas naquela região. Essa informação pode ser importante para o dono do estabelecimento, já que ele pode reorganizar os produtos de maneira a fazer com a aquela região não fique com tantas pessoas e consequentemente com a cor verde.
 
+# Como executar localmente:
+- git clone https://github.com/Dorivis/DetectorDePessoasComMascaras.git
+- cd DetectorDePessoasComMascaras
+- npm install
+- npm start
+- Acessar: http://localhost:3000/
+
 # [Link do protótipo](https://call4code-detect-mask.herokuapp.com/)
+
+# [Vídeo de demonstração](https://call4code-detect-mask.herokuapp.com/)
 
 
 Enjoy :)
