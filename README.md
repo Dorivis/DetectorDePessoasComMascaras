@@ -12,9 +12,9 @@ A Pandemia gerada pelo novo coronavírus causou inúmeros impactos na sociedade.
 Com o auxílio das próprias câmeras de segurança do estabelecimento, utilizamos algumas ferramentas de reconhecimento de imagens dentro da IBM Cloud para analisar se a pessoa está ou não utilizando máscaras e além disso, criamos um mapa de calor da região para exibir quais locais possuem uma maior quantidade de pessoas. Essa informação pode ser útil caso os responsáveis pelo estabelecimento queiram reorganizar os produtos de maneira a distribuir as pessoas entre diferentes regiões.
 
 ## Ferramentas utilizadas:
-- [Text To Speech]("https://www.ibm.com/br-pt/cloud/watson-text-to-speech")
-- [IBM Cloud Annotations]("https://cloud.annotations.ai/")
-- [Watson Machine Learning]("https://www.ibm.com/cloud/machine-learning")
+- [Text To Speech](https://www.ibm.com/br-pt/cloud/watson-text-to-speech)
+- [IBM Cloud Annotations](https://cloud.annotations.ai/)
+- [Watson Machine Learning](https://www.ibm.com/cloud/machine-learning)
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
