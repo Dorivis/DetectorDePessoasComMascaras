@@ -23,7 +23,7 @@ With the help of the establishment's own security cameras, we used some image re
 # Project images:
 
 ## Home screen:
-<img src="https://i.imgur.com/pACTONs.png" height="560" width="900">
+<img src="https://i.imgur.com/pACTONs.png" height="560" width="950">
 On the home screen, the footage available for the responsible person to view is displayed.
 
 ## Detections screen:
