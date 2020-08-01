@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/zHcrZC3.png" height="260" width="300">
+<img src="https://i.imgur.com/zHcrZC3.png" height="240" width="240">
 <img src="https://inforchannel.com.br/wp-content/uploads/2020/03/IBM-C4C.png" height="260" width="340">
 </p>
 
