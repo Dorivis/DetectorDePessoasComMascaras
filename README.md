@@ -27,10 +27,14 @@ With the help of the establishment's own security cameras, we used some image re
 On the home screen, the footage available for the responsible person to view is displayed.
 
 ## Detections screen:
-<img src="" height="160" width="200">
+<img src="https://i.imgur.com/dn8QIBi.jpg" height="560" width="950">
 On this screen, it is possible to view the video with the system by detecting people with and without masks. With this information and hands, we have a button that sends an audible alert on the establishment's sound system, informing the importance of wearing masks.
 
 Below we have a heat map of the establishment, showing the region that the security camera can reach and a color that varies between green and red according to the number of people in that region. This information can be important for the owner of the establishment, since he can reorganize the products in such a way as to make that region not stay with so many people and consequently with the green color.
+
+## Camera heat map:
+<img src="https://i.imgur.com/4DO0amm.jpg" height="560" width="950">
+Heat map indicating the risk of contagion in the region of the camera.
 
 # How to run locally:
 ```
@@ -43,7 +47,7 @@ Below we have a heat map of the establishment, showing the region that the secur
 
 ### [Prototype link](https://call4code-detect-mask.herokuapp.com/)
 
-### [Demo video](https://call4code-detect-mask.herokuapp.com/)
+### [Demo video](https://www.youtube.com/watch?v=tbppCvWFpVQ&rel=0)
 
 
 Enjoy :)
