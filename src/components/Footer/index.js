@@ -5,7 +5,7 @@ import { Container } from './styles';
 function Footer() {
 
     return (
-        <Container><p>© Mask Detection, Inc. All rights reserved.</p></Container>
+        <Container><p>© Mask Detection, Call for Code.</p></Container>
     );  
 }
 

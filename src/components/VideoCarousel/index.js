@@ -3,8 +3,8 @@ import 'react-multi-carousel/lib/styles.css';
 
 import { Container, CarouselModel ,Video } from './styles';
 
-import VideoFile from '../../uploads/videos/VideoMaskedAndNonMaskedPeople.mp4';
-import VideoTest from '../../uploads/videos/AdamTeste.mp4';
+import video_1 from '../../uploads/videos/video_1.mp4';
+import video_2 from '../../uploads/videos/video_2.mp4';
 
 function VideoCarousel() {
 
@@ -52,15 +52,15 @@ function VideoCarousel() {
                 itemClass="carousel-item-padding-40-px"
                 renderButtonGroupOutside={true}
             >
-                <div onClick={() => handleSelectedVideo(VideoFile)}>
-                    <Video controls muted preload="auto">
-                        <source src={VideoFile} type="video/mp4" />
+                <div onClick={() => handleSelectedVideo(video_2)}>
+                    <Video muted preload="auto" loop autoplay>
+                        <source src={video_1} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>
-                <div onClick={() => handleSelectedVideo(VideoTest)}>
-                    <Video controls muted preload="auto">
-                        <source src={VideoTest} type="video/mp4" />
+                <div onClick={() => handleSelectedVideo(video_2)}>
+                    <Video muted preload="auto" loop autoplay>
+                        <source src={video_2} type="video/mp4" />
                         Your browser does not support the video tag.
                     </Video>
                 </div>

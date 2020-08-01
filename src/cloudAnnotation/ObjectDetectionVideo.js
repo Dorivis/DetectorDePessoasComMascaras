@@ -68,8 +68,8 @@ const ObjectDetectionVideo = React.memo(
           return { ...prediction, bbox: [x, y, width, height] };
         });
 
-        const withMask = predictions.filter((prediction, index, array) => prediction.class === 'Com mascara');
-        const withoutMask = predictions.filter((prediction, index, array) => prediction.class === 'Sem mascara');
+        const withMask = predictions.filter((prediction, index, array) => prediction.class === 'with mask');
+        const withoutMask = predictions.filter((prediction, index, array) => prediction.class === 'without mask');
 
         setCount(predictions.length);
         setPersonWithMask(withMask.length);
